@@ -71,12 +71,13 @@ const removeStock = (request, response) => {
   )
 }
 
+/* No need for this as this is a purely front end requirement  */
 const checkStock = (request, response) => {
   const id = parseInt(request.params.id)
-  const { name, current_count, manual_count } = request.body
+  const { name, manual_count } = request.body
 
   pool.query(
-    'UPDATE products SET name = $1, current_count = $2, manual_count = $3 WHERE id = $4', [name, current_count, manual_count, id],
+    'UPDATE products SET name = $1, manual_count = $2 WHERE id = $3', [name, manual_count, id],
     (error, results) => {
       if (error) {
         throw error

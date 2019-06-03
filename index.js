@@ -19,6 +19,7 @@ app.get('/products', db.getProducts)
 app.get('/products/:id', db.getProductById)
 app.post('/products', db.createProduct)
 app.put('/products/:id', db.removeStock)
+app.patch('/products/:id', db.checkStock)
 
 app.listen(port, () => {
   console.log(`Inventory app running on port ${port}.`)
