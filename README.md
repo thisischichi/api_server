@@ -16,14 +16,14 @@ This repo contains a basic setup for a Postgres powered API server.
 ## POST 
 Create product and adds it to the inventory
 
-curl --data "name=HealthyVitabolic&current_count=18&manual_count=18" http://localhost:3010/products
+`curl --data "name=HealthyVitabolic&current_count=18&manual_count=18" http://localhost:3010/products`
 
 ## PUT 
 Removes a single item from the stock
 
-curl -X PUT -d "name=HealthyVitabolic" http://localhost:3010/products/5
+`curl -X PUT -d "name=HealthyVitabolic" http://localhost:3010/products/5`
 
 ## DELETE
 Deletes product from the inventory
 
-curl -X "DELETE" http://localhost:3010/products/4
+`curl -X "DELETE" http://localhost:3010/products/4`
