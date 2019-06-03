@@ -2,6 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
 const port = 3010
+const db = require('./queries')
 
 app.use(bodyParser.json())
 app.use(
@@ -13,6 +14,11 @@ app.use(
 app.get('/', (request, response) => {
   response.json({ info: 'A simple inventory API' })
 })
+
+app.get('/products', db.getProducts)
+app.get('/products/:id', db.getProductById)
+app.post('/products', db.createProduct)
+app.put('/products/:id', db.removeStock)
 
 app.listen(port, () => {
   console.log(`Inventory app running on port ${port}.`)
