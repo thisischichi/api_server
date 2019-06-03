@@ -7,7 +7,7 @@ This repo contains a basic setup for a Postgres powered API server.
 1. Clone this template repo to local machine
 2. `cd` into the cloned repo
 3. Set up a database using config detailed in queries.js
-4. run `node index.js` 
+4. Run `node index.js` 
 5. Visit http://localhost:3010/products/
 6. Visit http://localhost:3010/products/1 etc to see individual products
 
